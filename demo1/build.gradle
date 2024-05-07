@@ -27,3 +27,10 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+//task compileJRXMLToJasper(type: JavaExec) {
+//    main = 'com.example.demo.compiler.JasperCompiler'
+//    classpath = sourceSets.main.runtimeClasspath
+//    args = ['src/main/resources/report.jrxml']
+//}
+//
+//compileJRXMLToJasper.dependsOn('classes')
