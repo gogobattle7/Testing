@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.2.5'
     id 'io.spring.dependency-management' version '1.1.4'
+    id "io.github.f-cramer.jasperreports" version "0.0.1"
 }
 
 group = 'com.example'
@@ -34,3 +35,10 @@ tasks.named('test') {
 //}
 //
 //compileJRXMLToJasper.dependsOn('classes')
+
+jasperreports {
+    srcDir = file('src/main/resources/jrxml')
+    tmpDir = layout.buildDirectory.dir("generated/reports").get().asFile
+    outDir = file('src/main/resources')
+    classpath.from(configurations.compileClasspath)
+}
