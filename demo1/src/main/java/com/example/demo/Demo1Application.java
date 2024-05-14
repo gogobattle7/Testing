@@ -13,11 +13,11 @@ public class Demo1Application {
         SpringApplication.run(Demo1Application.class, args);
     }
 
-    @Bean
-    public CommandLineRunner compileJRXMLToJasper() {
-        return args -> {
-            JasperCompiler.compileJRXMLToJasper("src/main/resources/report.jrxml");
-        };
-    }
+//    @Bean
+//    public CommandLineRunner compileJRXMLToJasper() {
+//        return args -> {
+//            JasperCompiler.compileJRXMLToJasper("src/main/resources/report.jrxml");
+//        };
+//    }
 
 }
