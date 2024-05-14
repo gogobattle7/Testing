@@ -38,7 +38,7 @@ tasks.named('test') {
 
 jasperreports {
     srcDir = file('src/main/resources/jrxml')
-    tmpDir = layout.buildDirectory.dir("generated/reports").get().asFile
+    tmpDir = file('src/main/resources/jasperreports')
     outDir = file('src/main/resources')
     classpath.from(configurations.compileClasspath)
 }
